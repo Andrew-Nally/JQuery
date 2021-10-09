@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p> Hello WOrld</p>
+
+<script>
+ $(document).ready(function() {//grabs the html and says its ready to do something;
+    //were goign to add someting to the body element of the html document.
+    //adds a a containrer div with a Header that says basic Jquery allong twith three paragraoh elements 
+    $("html").append("<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic Jquery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                    </div>\
+               </div>\
+            </body>");
+        $("#2").css({"color":"red"});//changes font od 2nd p element to red
+        //when p # 3 is clicked it hides rhe h1 element we created earlier
+        $("#3").click(function() {
+            $('h1').hide();
+        });
+
+    });
+
+
+    //the html doc is ready to print an alert message that says...
+    //"A p with the alert class was clicked!"
+    // to the console log when the p element is clicked 
+
+    $(document).ready(function() {
+        $("button.alert").on("click", function() {
+            console.log("A p with the alert class was clicked!");
+        });
+    });
+    </script>
+    </body>
+
+    
+
